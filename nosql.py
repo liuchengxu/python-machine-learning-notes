@@ -115,7 +115,7 @@ def handle_increment(key):
     if not exists:
         return return_value
     elif not isinstance(value, int):
-        return (False, 'ERROR: Key [{}] contains non-list value ([{}])'.format(
+        return (False, 'ERROR: Key [{}] contains non-int value ([{}]), could not be incresed'.format(
             key, value))
     else:
         DATA[key] = value + 1
